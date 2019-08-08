@@ -1,0 +1,31 @@
+.login {
+    width: 600px;
+    height: 250px;
+	background-color: #efe8e8;
+	position:absolute;
+    left:0; right:0;
+    top:0; bottom:0;
+    margin:auto;
+    text-align: center;
+}
+.center {
+    padding: 10px;
+}
+input {
+    padding: 10px;
+    width: 90%;
+}
+.logout {
+    text-align: center;
+}
+.loginButton{
+    font-weight: bold;
+    width: 90%;
+    background: #00bcd4;
+    border: 1px solid #00bcd4;
+    font-size: 14px;
+    color: #fff;
+}
+.messageDisplay{
+    color:red;
+}
