@@ -1,10 +1,9 @@
 import React, {Component} from "react";
-import * as constants from "./../constant"
 import {BrowserRouter, Route, Switch, Link, Redirect} from 'react-router-dom';
-import LogOut from './../components/logout';
-import Footer from './../components/footer';
+import Header from './../components/header';
+import * as constants from "./../constant"
 
-class App extends Component {
+class Login extends Component {
     
     constructor(props){
         super(props);
@@ -27,14 +26,11 @@ class App extends Component {
         (this.state.username===constants.USERNAME && this.state.password===constants.PASSWORD) ? this.setState({validUser: true}) : this.setState({validUser: false})
     }
 
+   
     render(){
         return (
             <BrowserRouter>
-            <header>
-                <h2>Sign In</h2>
-              </header>
-              <section>
-                <article>
+                <Header />
                 {this.state.validUser && <Redirect to='/logout' />}
                 <Switch>
                     <Route exact path='/' render={()=> (<form className='login' onSubmit={this.submitHandler}>
@@ -47,15 +43,11 @@ class App extends Component {
                         </div>
                     </form>)} />
 
-                    <Route path='/logout' component={LogOut} />
+                   
                 </Switch>
-                 </article>
-              </section>   
-                
-                <Footer />
             </BrowserRouter>
         )
     }
 }
 
-export default App;
+export default Login;

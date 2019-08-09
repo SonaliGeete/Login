@@ -1,15 +1,50 @@
+
+* {
+    box-sizing: border-box;
+  }
+/* Style the header */
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+  
+
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 100%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+    text-align: center;
+  }
+  
+  /* Clear floats after the columns */
+  section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+
 .login {
     width: 600px;
-    height: 250px;
-	background-color: #efe8e8;
-	position:absolute;
-    left:0; right:0;
-    top:0; bottom:0;
-    margin:auto;
-    text-align: center;
+    height: 245px;
+	margin: 0 auto;
 }
 .center {
-    padding: 10px;
+    padding: 20px;
 }
 input {
     padding: 10px;
