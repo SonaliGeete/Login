@@ -1,11 +1,11 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 
-function LogOut(){
+function LogOut(props){
     return (
         <div>
             <Link to='/'>Logout</Link>
-            <h1>Welcome...</h1>
+            <h1>Welcome, {props.name}</h1>
         </div>
     )
 }
